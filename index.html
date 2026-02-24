@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>West Coast Swing - Concepts & Techniques</title>
     <style>
+        :root {
+            --smart-blue: #0466c8;
+            --sapphire: #0353a4;
+            --regal-navy: #023e7d;
+            --prussian-blue: #002855;
+            --prussian-blue-2: #001845;
+            --prussian-blue-3: #001233;
+            --twilight-indigo: #33415c;
+            --blue-slate: #5c677d;
+            --slate-grey: #7d8597;
+            --lavender-grey: #979dac;
+            
+            --turn-female: #e91e63;
+            --turn-male: #4caf50;
+            --turn-both: #ff9800;
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -30,7 +47,7 @@
         }
         
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--smart-blue) 0%, var(--sapphire) 100%);
             color: white;
             padding: 30px 20px;
             text-align: center;
@@ -61,19 +78,20 @@
         nav h2 {
             font-size: 1.2em;
             margin-bottom: 15px;
-            color: #667eea;
+            color: var(--smart-blue);
         }
         
         nav ul {
             list-style: none;
+            margin-left: 0;
         }
         
         nav ul li {
-            margin-bottom: 8px;
+            margin-bottom: 3px;
         }
         
         nav ul ul {
-            margin-left: 15px;
+            margin-left: 0;
             margin-top: 5px;
         }
         
@@ -81,17 +99,46 @@
             color: #555;
             text-decoration: none;
             transition: color 0.2s;
-            display: block;
+            display: flex;
+            align-items: center;
             padding: 8px 5px;
             border-radius: 4px;
             min-height: 44px;
-            display: flex;
-            align-items: center;
+        }
+        
+        nav > ul > li > a {
+            color: var(--smart-blue);
+            font-weight: 600;
+            padding-left: 10px;
+        }
+        
+        nav ul ul a {
+            color: var(--slate-grey);
+            font-size: 0.95em;
+            padding-left: 25px;
+        }
+        
+        nav > ul > li > a:hover {
+            color: var(--sapphire);
+            background: #f0f0f0;
+        }
+        
+        nav ul ul a:hover {
+            color: var(--smart-blue);
+            background: #f0f0f0;
         }
         
         nav a:hover {
-            color: #667eea;
+            color: var(--smart-blue);
             background: #f0f0f0;
+        }
+        
+        nav a.current-focus {
+            color: var(--smart-blue);
+            font-weight: 600;
+            background: #f0f0f0;
+            border-left: 3px solid var(--smart-blue);
+            padding-left: 7px;
         }
         
         main {
@@ -106,15 +153,15 @@
         }
         
         h2 {
-            color: #667eea;
+            color: var(--smart-blue);
             font-size: 2em;
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 3px solid var(--smart-blue);
         }
         
         h3 {
-            color: #764ba2;
+            color: var(--sapphire);
             font-size: 1.5em;
             margin-top: 30px;
             margin-bottom: 15px;
@@ -142,7 +189,34 @@
         }
         
         strong {
-            color: #764ba2;
+            color: var(--sapphire);
+        }
+        
+        pre {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        
+        .turn-female {
+            color: var(--turn-female);
+        }
+        
+        .turn-male {
+            color: var(--turn-male);
+        }
+        
+        .turn-both {
+            color: var(--turn-both);
+        }
+        
+        sup {
+            font-size: 0.65em;
+            font-weight: 600;
+            vertical-align: super;
+            line-height: 0;
+        }
+
+        .leader {
         }
         
         @media (max-width: 768px) {
@@ -290,6 +364,27 @@
                 font-size: 1em;
             }
         }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--smart-blue);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px);
+        }
     </style>
 </head>
 <body>
@@ -345,6 +440,7 @@
                 </li>
                 <li><a href="#footwork">Footwork</a></li>
                 <li><a href="#struggles">Struggles</a></li>
+                <li><a href="#current-focus">Current Focus</a></li>
             </ul>
         </nav>
         
@@ -363,7 +459,7 @@
                                     <li>drill: overrotation; lead transitions from providing energy to "catching" the follow as they overrotate. Leader uses own rotation to rotate the follow.</li>
                                 </ul>
                             </li>
-                            <li>follows find level 10 stretch with their feet, not by giving up frame, arm, or settling into hip (Brandi 2016)</li>
+                            <li>follows find level 10 stretch (point of no more) with their feet, not by giving up frame, arm, or settling into hip (Brandi 2016)</li>
                             <li>drill: lower your partner slowly into a chair</li>
                             <li>drill: lower and raise each other from chair slowly while counterbalancing</li>
                             <li>drill: go to "point of no more", then walk forwards and backwards</li>
@@ -388,8 +484,8 @@
                     <li>do NOT move your partner, use the connection to move yourself</li>
                     <li>only give the connection as much energy as it can handle without breaking (size/strength differentials matter)</li>
                     <li>leaders: always use arcs in your preps and leads to allow the follow to catch up and move smoothly</li>
-                    <li>leaders: lead should applied "under" the lead / connection. Initiating lead by dipping ribs/shoulder not good because it initiates lead from above connection (Royston 2016)</li>
-                    <li>drill: try leading above, below and at the level of the connection point to feel the difference</li>
+                    <li>leaders: lead should be applied "under" the lead / connection. As far as I can tell this basically means movement initiates with the hips / feet Initiating lead by dipping ribs/shoulder not good because it initiates lead from above connection (Royston 2016)</li>
+                    <li>drill: try leading above (e.g. leaning head back), below and at the level of the connection point to feel the difference</li>
                     <li>drill: arc your prep into the sugar tuck</li>
                     <li>drill: do it wrong - move your partner instead of yourself, then do it right.</li>
                 </ul>
@@ -692,22 +788,45 @@
             
             <section id="patterns">
                 <h2>Patterns</h2>
+
+                <p>Patterns can largely be broken into sugar pushes or combinations of a passing the leader on one side or the other. Let's say from the context of the starting position, "A" is anything where the follower passes the on the right side of the leader and "B" is anything where the follower passes on the left side of the leader. Then the basic whip would be AB. Inside or outside turns can be added to any section of the pattern for leader, follower, or both.
+                </p>
                 <ul>
                     <li>
                       Sugar Push
                       <ul>
                         <li>leader hands widen just outside follow's hips; any further would take away her power</li>
                         <li>empower follow's standing leg on 3+, don't push her into 4 (let her push herself)</li>
-
+                        <li>sugar tuck (SP <span class="turn-female">↻<sup>♀</sup></span>)</li>
+                        <li>cutoff (SP <span class="turn-female">↺<sup>♀</sup></span>)</li>
                       </ul>
                     </li>
-                    <li>Left Side Pass</li>
-                    <li>Right Side Pass
+                    <li>Left Side Pass (B)
                         <ul>
-                            <li>under arm turn</li>
+                            <li>passing tuck (B <span class="turn-female">↻<sup>♀</sup></span>)</li>
+                            <li>leader spin (bring follow's hand to rib cage on 2) (B <span class="turn-male">↺<sup>♂</sup></span>)</li>
+                            <li>double inside roll (B <span class="turn-female">↺↺<sup>♀</sup></span>)</li>
                         </ul>
                     </li>
-                    <li>Whips</li>
+                    <li>Right Side Pass (A)
+                        <ul>
+                            <li>under arm turn (A <span class="turn-female">↺<sup>♀</sup></span>)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Whips
+                        <ul>
+                            <li>basic (AB)</li>
+                            <li>w/ double outside turn or free spin (AB <span class="turn-female">↻↻<sup>♀</sup></span>)</li>
+                            <li>w/ double inside roll (AB <span class="turn-female">↺↺<sup>♀</sup></span>)</li>
+                            <li>same side (AA)</li>
+                            <li>same side with tuck (AA<span class="turn-female">↻<sup>♀</sup></span>)</li>
+                            <li>left-side whip (BB) - leader doesn't triple</li>
+                            <li>basket whip (AB)</li>
+                            <li>decapitative whip (AB<span class="turn-both">↻<sup>⚤</sup></span>)</li>
+                            <li>reverse whip (A<span class="turn-female">↺<sup>♀</sup></span> B)</li>
+                        </ul>
+                    </li>
                     <li>Walkarounds</li>
                     <li>Dips</li>
                     <li>Ducks</li>
@@ -736,7 +855,7 @@
                 </ul>
                 
                 <h3 id="patterns-practice">Practice</h3>
-                <p>different hand holds</p>
+                <p>Practice all basics using different hand holds</p>
                 <ul>
                     <li>Normal</li>
                     <li>R-R</li>
@@ -746,6 +865,16 @@
                     <li>Right over Left</li>
                     <li>Left over Right</li>
                 </ul>
+                <p>
+                    Write out the list of four possible A / B combinations and choose a turn(s) to add over one or both sections of pattern (e.g. a follower turn over first half of pattern). Play with different hand holds and turn directions. For example:
+                    <pre>
+<span class="turn-female">↺<sup>♀</sup></span>  <span class="turn-male">↻<sup>♂</sup></span>
+A   B
+B   A
+A   A
+B   B
+                    </pre>
+                </p>
             </section>
             
             <section id="anchors">
@@ -786,6 +915,9 @@
                     <li>Knee ball change</li>
                     <li>ronde</li>
                     <li>chugs</li>
+                    <li>drags (anchor, &3)</li>
+                    <li>circular drag left foot into 1 (looks better if left foot starts in front of right)</li>
+                    <li>drag left through 1 into syncopated +2</li>
                     <li>drill: hitch on 1+2</li>
                     <li>drill: shag routine - Jeffrey Munson</li>
                     <li>drill: extra step on 2+ beat, then kick ball change on 3-and-4 -- Keerigan Rudd</li>
@@ -801,7 +933,8 @@
                     <li>Too in my head while social dancing - prevents me from listening to the music</li>
                     <li>limited pattern vocabulary for matching music e.g. lyrical / hits / fast-continuous parts / etc.</li>
                     <li>practice reacting to the music even if it's late / unplanned</li>
-                    <li>legato movements "too wiggly"</li>
+                    <li>hip swing on forward step of triples (move forward from 2" above belly button, struggle to do this and delay weight transfer)</li>
+                    <li>legato movements "too wiggly" (too much upper body motion, doesn't originate from core/legs)</li>
                     <li>beach / bar; general upper body styling (isolations a la ben morris vs centrally proximal movements)</li>
                     <li>walking
                         <ul>
@@ -817,6 +950,16 @@
                         awkward free arm (get comfy with 90deg bend / no loose wrist, behind back, or on chest). Let the arm flow as part of body. Raise free arm on sugar tucks
                     </li>
                 </ul>
+            </section>
+
+            <section id="current-focus">
+                <h2>Current Focus</h2>
+                <ul>
+                    <li>remove hip swing from triple</li>
+                    <li>upper body styling</li>
+                    <li>footwork / timing mirroring "boom tick boom boom tick"</li>
+                </ul>    
+
             </section>
         </main>
     </div>
@@ -850,6 +993,31 @@
                 }
             });
         });
+        
+        // Update current-focus on scroll
+        function updateCurrentFocus() {
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            const sections = document.querySelectorAll('section[id]');
+            
+            let currentSection = null;
+            
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= 150) {
+                    currentSection = section.id;
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('current-focus');
+                if (link.getAttribute('href') === '#' + currentSection) {
+                    link.classList.add('current-focus');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', updateCurrentFocus);
+        updateCurrentFocus();
     </script>
 </body>
 </html>
