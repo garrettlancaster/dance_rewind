@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>West Coast Swing - Concepts & Techniques</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 30px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        nav {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        
+        nav h2 {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+        
+        nav ul {
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-bottom: 8px;
+        }
+        
+        nav ul ul {
+            margin-left: 15px;
+            margin-top: 5px;
+        }
+        
+        nav a {
+            color: #555;
+            text-decoration: none;
+            transition: color 0.2s;
+            display: block;
+            padding: 3px 0;
+        }
+        
+        nav a:hover {
+            color: #667eea;
+        }
+        
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        h3 {
+            color: #764ba2;
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        h4 {
+            color: #555;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        ul ul, ol ul {
+            margin-top: 8px;
+        }
+        
+        strong {
+            color: #764ba2;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            nav {
+                position: static;
+                max-height: none;
+            }
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #667eea;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>West Coast Swing</h1>
+        <p>Concepts & Techniques Guide</p>
+    </header>
+    
+    <div class="container">
+        <nav>
+            <h2>WCS</h2>
+            <ul>
+                <li><a href="#connection">Connection</a>
+                    <ul>
+                        <li><a href="#elasticity">Elasticity</a></li>
+                        <li><a href="#plane-of-connection">Plane of Connection</a></li>
+                        <li><a href="#follower-weight">Follower "Weight"</a></li>
+                        <li><a href="#power-and-control">Power and Control</a></li>
+                        <li><a href="#rotational-vs-linear">Rotational vs Linear</a></li>
+                        <li><a href="#frame">Frame</a></li>
+                        <li><a href="#opposition">Opposition</a></li>
+                        <li><a href="#lead-follow">Lead & Follow</a></li>
+                    </ul>
+                </li>
+                <li><a href="#how-to-move">How to Move</a>
+                    <ul>
+                        <li><a href="#walking">Walking</a></li>
+                        <li><a href="#tripling">Tripling</a></li>
+                        <li><a href="#pitch-poise-posture">Pitch, Poise, Posture, Position</a></li>
+                        <li><a href="#weight-transfer">Weight Transfer</a></li>
+                        <li><a href="#knee-bounces">Knee Bounces</a></li>
+                        <li><a href="#styling">Styling</a></li>
+                    </ul>
+                </li>
+                <li><a href="#musicality">Musicality</a>
+                    <ul>
+                        <li><a href="#musicality-components">Components</a></li>
+                        <li><a href="#musicality-partnership">Partnership</a></li>
+                        <li><a href="#musicality-dynamics">Dynamics</a></li>
+                    </ul>
+                </li>
+                <li><a href="#patterns">Patterns</a>
+                    <ul>
+                        <li><a href="#patterns-practice">Practice</a></li>
+                    </ul>
+                </li>
+                <li><a href="#anchors">Anchors</a>
+                    <ul>
+                        <li><a href="#anchors-generic">Generic</a></li>
+                        <li><a href="#anchors-open-closed">Open → Closed</a></li>
+                        <li><a href="#anchors-closed-open">Closed → Open</a></li>
+                    </ul>
+                </li>
+                <li><a href="#footwork">Footwork</a></li>
+                <li><a href="#struggles">Struggles</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <section id="connection">
+                <h2>Connection</h2>
+                
+                <h3 id="elasticity">Elasticity</h3>
+                <ol>
+                    <li><strong>Stretch (tension)</strong>
+                        <ul>
+                            <li>controlled release: lowering a baby into the crib</li>
+                            <li>the follower moves in the direction of the connection (linearly or rotationally), seeking maximum stretch until it is reached or the lead compresses and redirects
+                                <ul>
+                                    <li>When the lead is initiating movement (e.g. an overrotation), they should provide 80% of the energy to the follow, and the follow should continue the energy to reach the stretch point</li>
+                                    <li>drill: overrotation; lead transitions from providing energy to "catching" the follow as they overrotate. Leader uses own rotation to rotate the follow.</li>
+                                </ul>
+                            </li>
+                            <li>follows find level 10 stretch with their feet, not by giving up frame, arm, or settling into hip (Brandi 2016)</li>
+                            <li>drill: lower your partner slowly into a chair</li>
+                            <li>drill: lower and raise each other from chair slowly while counterbalancing</li>
+                            <li>drill: go to "point of no more", then walk forwards and backwards</li>
+                        </ul>
+                    </li>
+                    <li><strong>Compression</strong>
+                        <ul>
+                            <li>absorbing and optionally redirecting your partner's energy</li>
+                            <li>leads and follows: accelerate redirection by rotating hips in opposition (hips can either mirror each other for redirection or be parallel for hanging out)</li>
+                            <li>drill: catch yourself falling forward into a wall, then pushing off it</li>
+                            <li>drill: practice hip mirroring in sugar tuck</li>
+                        </ul>
+                    </li>
+                    <li>Stretch and compression are usually entered and exited in two beat segments</li>
+                </ol>
+                
+                <h3 id="plane-of-connection">Plane of Connection</h3>
+                <ul>
+                    <li>imagine a plane (surface) between you and your partner</li>
+                    <li>moving yourself towards or away from that plane creates tension or compression</li>
+                    <li>moving your connection point away from the center of the plane controls distance from your partner (e.g. opening arms in a sugar push)</li>
+                    <li>do NOT move your partner, use the connection to move yourself</li>
+                    <li>only give the connection as much energy as it can handle without breaking (size/strength differentials matter)</li>
+                    <li>leaders: always use arcs in your preps and leads to allow the follow to catch up and move smoothly</li>
+                    <li>leaders: lead should applied "under" the lead / connection. Initiating lead by dipping ribs/shoulder not good because it initiates lead from above connection (Royston 2016)</li>
+                    <li>drill: try leading above, below and at the level of the connection point to feel the difference</li>
+                    <li>drill: arc your prep into the sugar tuck</li>
+                    <li>drill: do it wrong - move your partner instead of yourself, then do it right.</li>
+                </ul>
+                
+                <h3 id="follower-weight">Follower "Weight"</h3>
+                <ul>
+                    <li>strive for "active weight" that wants to be moved rather than "dead weight" that resists movement</li>
+                    <li>inertia: objects in motion stay in motion; objects at rest stay at rest</li>
+                    <li>levels of connection: constant, initiate/neutral/catch, ramping</li>
+                    <li>Brandi: "he is the reason I move, but not what moves me"</li>
+                    <li>Jeffrey: "it's my job to get you up on to the floor, you do the rest" (follower off edge of dance floor)
+                    <li>Jeffrey: follower is "walking uphill"
+                    <li>Brandi: "I don't move when he moves, I move when it's time" - leaders have to move first (on 1), so she stays grounded and moves when the music calls for it</li>
+                    <li>Brandi: Follows shouldn't be afraid of tension, should be afraid of holding tension too long. Be heavy moving away from lead, light moving with lead</li>
+                    <li>relaxing your arms does not mean relaxing your lats - you can hold your arm up and not be "heavy" without tensing your biceps</li>
+                </ul>
+                
+                <h3 id="power-and-control">Power and Control</h3>
+                <ul>
+                    <li>at any given time, one partner is usually the "power" and the other is the "control"
+                        <ul>
+                            <li>usually the power is the partner walking backward, and the control is the partner walking forward</li>
+                            <li>analogy: driving a front-wheel-drive car</li>
+                            <li>analogy: a person walking has a power leg and a control leg</li>
+                            <li>the "power" partner generates energy and direction</li>
+                            <li>the "control" partner moderates how fast</li>
+                            <li>waiting for the stretch to reach its fullest before moving on 1 allows the couple to move as a unit without "pulling" or jerky movements</li>
+                        </ul>
+                    </li>
+                    <li>leads generally decelerate by creating bigger volume movements</li>
+                    <li>follows generally decelerate with tension</li>
+                </ul>
+                
+                <h3 id="rotational-vs-linear">Rotational vs Linear</h3>
+                <ul>
+                    <li>follow never changes a lead from rotational to linear (or vice versa)</li>
+                    <li>leader prepping should largely come from hips turning, not arm movement</li>
+                    <li>leader should push into palm of follow's hand to initiate turns (e.g. sugar tuck) rather than full hand to hand contact. This also helps maintain the correct hand connection after the rotation</li>
+                </ul>
+                
+                <h3 id="frame">Frame</h3>
+                <ul>
+                    <li>both leader and follow primarily use the base of middle two fingers in handhold. When turning, leader gets index/pinky finger out of the way and follow maintains hook around them to facilitate rotation</li>
+                    <li>the connection from your hands to your center should mirror what's happening from your feet to your center. This communicates exactly what you're doing to your partner.<br/>
+                        Drill: get your partner to mirror different anchors with their eyes closed
+                    </li>
+                    <li>follower maintains connection toward and away from connection point, but allows arms to move freely up and down</li>
+                    <li>the most important connection point is the one currently closest to the center of the follow's body</li>
+                    <li>in closed position, the leader connects to the follower's shoulder joint, NOT under the scapula. This allows the follow's spine to remain free (Royston 2016).  From follow's perspective you don't want to push your back into their hand, push line of gravity backward</li>
+                </ul>
+                
+                <h3 id="opposition">Opposition (counter-balance)</h3>
+                <ul>
+                    <li>certain moves require partners to shift their weight away from each other while maintaining connection</li>
+                    <li>drill: ring around the rosie</li>
+                    <li>drill: practice whips with leader lifting foot and letting the follow bring them around</li>
+                    <li>drill: turning basic</li>
+                    <li>drill: ride</li>
+                </ul>
+                
+                <h3 id="lead-follow">Lead & Follow</h3>
+                <ul>
+                    <li>leaders: focus on talking to the foot the follow is standing on, not the one they're going to step on
+                      <ul>
+                        <li>on 1, ask back foot to push them forward (empower it)</li>
+                        <li>on sugar push, empower 3&, don't push her to 4</li>
+                      </ul>
+                    </li>
+                </ul>
+            </section>
+            
+            <section id="how-to-move">
+                <h2>How to Move</h2>
+                
+                <h3 id="walking">Walking</h3>
+                <h4>Principles</h4>
+                <ul>
+                    <li>Your head, spine, and hips empower your standing leg. Your free leg determines direction and speed. Your standing leg provides power.</li>
+                    <li>Standing leg should be 70% back of ball of foot / 30% front of heel. Try to strike before pushing off.</li>
+                    <li>Stay on standing leg as long as possible, especially on 1. Can use rotation, weight transfer</li>
+                    <li>Foot always strikes ahead of head, especially on 1 for leaders and 4 for followers</li>
+                    <li>Push down into the floor to create cleaner look and power movement (Jeffrey)</li>
+                </ul>
+                
+                <h4>Backwards</h4>
+                <ul>
+                    <li>clear the foot, THEN push from the standing leg; clearing should be 0-capture</li>
+                    <li>breaking the knee allows the foot to clear the ground
+                        <ul>
+                            <li>think about straightening the standing leg to break the knee of the moving leg</li>
+                            <li>pull the moving leg's heel backwards</li>
+                        </ul>
+                    </li>
+                    <li>your head-weight has to come forward slightly to empower your standing leg to push you backward</li>
+                    <li>if you "move from your spine/center", your head and hips will be behind your moving foot and you're falling, not walking</li>
+                    <li>think about pushing the floor away from you with your standing leg</li>
+                    <li>drill: clear the leg and pause before pushing off</li>
+                    <li>drill: count 1-e-and-ah 2-e-and-ah, with the weight being fully transferred on the "and" counts, clearing and pushing on the "ah" counts</li>
+                </ul>
+                
+                <h4>Forwards</h4>
+                <ul>
+                    <li>just fucking walk - Dani</li>
+                    <li>Follows: put their weight into standing heel before 1, but keep pitch/poise/posture (Brandi 2016)</li>
+                    <li>Follows: fully straigten left leg before bending knee of right on anchor/1. Only breaks knee when ready to move (Brandi 2016)</li>
+                </ul>
+
+                <h4>Variations</h4>
+                <ul>
+                  <li>slow (2 beats per step)</li>
+                  <li>normal (1 beat per step)</li>
+                  <li>fish-tail</li>
+                  <li>levels (high/medium/low or high/low)</li>
+                  <li>leg actions (International, American, Street)</li>
+                  <li>Kick ball change</li>
+                  <li>Point ball change</li>
+                  <li>Knee ball change</li>
+                  <li>Ball-change Ball-change Ball-change</li>
+                  <li>Rondes</li>
+                </ul>
+                
+                <h3 id="tripling">Tripling</h3>
+                <ul>
+                    <li>changes weighted leg in 2 beats instead of 1</li>
+                    <li>allows hitting the swing beat in some music (largely blues)</li>
+                    <li>allows changing direction</li>
+                    <li>partial, full, delay</li>
+                    <li>very small back step</li>
+                    <li>can triple in body without feet</li>
+                    <li>optionally turn your front foot out to absorb upward movement from straightening leg on triple (Royston)</li>
+                    <li>imagine you are a pendulum, the top of which can be based above your head, at your head, or in your rib cage (usually in rib cage for WCS, but can be higher especially for slower more flowy music) - Keerigan</li>
+                    <li>leader: avoid hip swing on 4, especially on sugar push - trying to lead with chest forward, hips back helps (Jeffrey)</li>
+                    <li>anchor: standing leg heel stays up as long as possible, can straighten leg before lowering heel</li>
+                    <li>follower mistake: many do full/partial/full on anchor and 3+4 of sugar push -- out of control</li>
+                    <li>drill: triple in your body, starting with big movements and gradually making them smaller</li>
+                </ul>
+                
+                <h3 id="pitch-poise-posture">Pitch, Poise, Posture, Position</h3>
+                <ul>
+                    <li><strong>Posture:</strong> This refers to how you carry your body. It involves four major blocks:
+                        <ul>
+                            <li><strong>Head:</strong> Align your ears up over your shoulders. You can look down by hinging in the middle of your neck, but avoid dropping your head weight off your axis by hinging at the base of your neck.</li>
+                            <li><strong>Shoulders:</strong> Lift them up, roll them back, press them down, and then widen your back by engaging pectoral muscles to pull shoulder blades apart, then relax.</li>
+                            <li><strong>Rib Cage:</strong> Keep your rib cage in a closed position while dancing: proper dancer posture is a long, wide back and a shorter, narrower front.</li>
+                            <li><strong>Pelvis:</strong> Keep your pelvis level like a bucket of water filled to the brim, without tipping forward or tucking under. The goal is to pull your hip bones up towards the ceiling to create a level base for the rest of your body.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Pitch:</strong> The relationship between your shoulders and your hips. Royston and Brandi dance with a fixed forward pitch, meaning the hips are behind the shoulders. The goal is for your hips to be the furthest point from your partner, communicating from the hip into the hand. This forward pitch allows for effective movement forward and backward, as seen in walking studies.</li>
+                    <li><strong>Poise:</strong> Where you carry your weight over your foot (ball or heel). Relationship between hips and feet. Brandi (2016) spends a significant portion of time poised over the heel to be grounded and effective, allowing for power generation from the foot and ankle, similar to Tango. </li>
+                    <li>followers: pitch forward and poise backwards (hip weight over heel, head weight over back of ball of foot), you will be grounded. Can't get pulled out of position as easily. Solves getting "pulled out too early" problem.
+                        <ul>
+                            <li>drill: practice step 1 with follower in different positions of pitch and poise to feel the difference</li>
+                            <li>drill: practice standing in correct pitch/poise and resist being pulled out of position by leader</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h4>Head-weight hip-weight counter-balance</h4>
+                <ul>
+                    <li>focus on line of gravity, not "center"</li>
+                    <li>your head and hips counter-balance each other to keep from falling</li>
+                    <li>your head must always have somewhere to go (i.e. if your head makes it over your standing leg too quickly, your body will imagine a new line of gravity and fall that way)</li>
+                    <li>drill: walk backwards with head leading hips, hips leading head, and head over hips</li>
+                </ul>
+                
+                <h3 id="weight-transfer">Weight Transfer</h3>
+                <ul>
+                    <li>faster music = more weight transfer on strike, slower music = less weight transfer on strike</li>
+                    <li>delaying weight transfer lets you style more and fill time musically</li>
+                    <li>roll out of your foot to roll into it on strike</li>
+                    <li><strong>partial:</strong> transfers weight, but head weight or hip weight prevents the new position from being balanced (e.g. count 3 on 6 count basic, or count 5 on anchor)</li>
+                    <li><strong>full:</strong> immediately transfers weight and head/hip weight is balanced over standing leg (e.g. count 3+ or 5+ of 6 count basic)</li>
+                    <li><strong>delay:</strong> foot strikes, but slowly transfers weight usually by rolling through foot (e.g. count 1, 2, 4, 6 of basic)</li>
+                    <li>drill: hover foot above ground on strike of zero-capture steps (leader sugar push: 1, 2, 4, 6) - Keerigan Rudd</li>
+                </ul>
+                
+                <h3 id="knee-bounces">Knee Bounces</h3>
+                <ul>
+                    <li>lean forward slightly (on the balls of your feet) so you don't do umpa lumpa bounces</li>
+                    <li>shoot energy out the back of your knees</li>
+                    <li>drill: practice bouncing one or both knees while moving hips side to side, in a half circle or figure 8 motion</li>
+                </ul>
+                
+                <h3 id="styling">Styling</h3>
+                <ul>
+                    <li>International, American, and Street styles</li>
+                    <li>Can do a muted version of the "fish-tail" walk from lindy</li>
+                    <li>Foot striking: ball, heel (don't flex ankle, just let it naturally hang), toe-release</li>
+                    <li>Roll through your feet; roll out of your feet</li>
+                    <li>Knees bend parallel to your center line, not over your toes</li>
+                    <li>CBM</li>
+                    <li>CBMP (e.g. Benji, Nicole)</li>
+                    <li>Same Side (e.g. Tori)</li>
+                    <li>Beach / Bar with upper body posture</li>
+                    <li>dancing "T"s vs "S"s</li>
+                    <li>proximal vs distal movement -- don't be an appendage dancer</li>
+                </ul>
+            </section>
+            
+            <section id="musicality">
+                <h2>Musicality</h2>
+                
+                <h3 id="musicality-components">Components</h3>
+                <ul>
+                    <li>Song-specific movements (simple, unique rythms)</li>
+                    <li>Swing</li>
+                    <li>Lyric</li>
+                    <li>Phrase changes
+                        <ul>
+                            <li>Verse to Chorus transition (usually fast -> slow or fast -> continuous)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>stretch sounds</h4>
+                        <ul>
+                            <li>drags on anchor, 4s, or e.g. &3 of underarm turn</li>
+                            <li>stretchy anchor</li>
+                            <li>overration with stretch</li>
+                            <li>slingshot</li>
+                        </ul>
+                    </li>
+                    <li>staccato sounds</li>
+                    <li>ghost notes</li>
+                    <li>big hits</li>
+
+                    <li>Hitting 1s
+                        <ul>
+                            <li>syncopations</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Hitting 5s (ct 5 is just the 1 of the 2nd 4/4 measure)
+                    </li>
+                    <li><strong>Practice</strong>
+                        <ul>
+                            <li>charting music
+                                <ul>
+                                    <li>royston charting</li>
+                                    <li>chart drum line, base line, lyrics, etc separately (Jeffrey)</li>
+                                </ul>
+                            </li>
+                            <li>simple physicalizing; start by just acknowledging with your body that you would do something</li>
+                            <li>pseudo swing dance by yourself</li>
+                            <li>counting straight 8s
+                                <ul>
+                                    <li>point on 1s</li>
+                                </ul>
+                            </li>
+                            <li>feeling build / v2c transition</li>
+                            <li>
+                              Dress in drag (emulate someone)
+                              <ul>
+                                <li>the performer / singer (Bruno Mars, etc)</li>
+                                <li>different dancers (e.g. Benji / Nicole / Emeline / etc)</li>
+                                <li>actors (Antonio Banderas, Meryl Streep, etc)</li>
+                              </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h3 id="musicality-partnership">Partnership</h3>
+                <ul>
+                    <li>mirroring
+                        <ul>
+                            <li>drill: dance basic for 8, 16 counts, then mirror on anchor for 8</li>
+                        </ul>
+                    </li>
+                    <li>mapping (watch what parts of the music the other person is hearing and moving to)</li>
+                    <li>look at your partner like you would in a conversation; leader can also look where you're sending them</li>
+                </ul>
+                
+                <h3 id="musicality-dynamics">Dynamics</h3>
+                <ul>
+                    <li>loud vs soft
+                        <ul>
+                            <li>often soft in beginning (stay in closed until opens up)</li>
+                        </ul>
+                    </li>
+                    <li>high vs low
+                        <ul>
+                            <li>verticality</li>
+                        </ul>
+                    </li>
+                    <li>staccato vs legato</li>
+                    <li>slow vs fast
+                        <ul>
+                            <li>speed → how much weight you transfer on strike</li>
+                        </ul>
+                    </li>
+                    <li>
+                      rythmic vs lyrical
+                      <ul>
+                        <li>when baseline is more important (blues), styling predominates in lower body</li>
+                        <li>lyrical (think Ed Sheeran), upper body styling</li>
+                      </ul>
+                    </li>
+                </ul>
+            </section>
+            
+            <section id="patterns">
+                <h2>Patterns</h2>
+                <ul>
+                    <li>
+                      Sugar Push
+                      <ul>
+                        <li>leader hands widen just outside follow's hips; any further would take away her power</li>
+                        <li>empower follow's standing leg on 3+, don't push her into 4 (let her push herself)</li>
+
+                      </ul>
+                    </li>
+                    <li>Left Side Pass</li>
+                    <li>Right Side Pass
+                        <ul>
+                            <li>under arm turn</li>
+                        </ul>
+                    </li>
+                    <li>Whips</li>
+                    <li>Walkarounds</li>
+                    <li>Dips</li>
+                    <li>Ducks</li>
+                    <li>Follower Rides
+                        <ul>
+                          <li>outside turn -> duck -> tricep grab</li>
+                          
+                        </ul>
+                    </li>
+                    <li>
+                        Leader Rides
+                        <ul>
+                            <li>from basket (use &3 syncopation to accelerate)</li>
+                            <li>LSP inside roll w/hip catch</li>
+                            <li>R-L wrap -> duck -> rib catch</li>
+                        </ul>
+                    </li>
+                    <li>Lifts</li>
+                    <li>Pirhouettes</li>
+                    <li>Special
+                        <ul>
+                            <li>whip-it</li>
+                            <li>monkey swing</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h3 id="patterns-practice">Practice</h3>
+                <p>different hand holds</p>
+                <ul>
+                    <li>Normal</li>
+                    <li>R-R</li>
+                    <li>R-L</li>
+                    <li>L-R</li>
+                    <li>Both</li>
+                    <li>Right over Left</li>
+                    <li>Left over Right</li>
+                </ul>
+            </section>
+            
+            <section id="anchors">
+                <h2>Anchors</h2>
+                
+                <h3 id="anchors-generic">Generic</h3>
+                <ul>
+                    <li>basic triple; start moving backwards on 5 to maintain stretch</li>
+                    <li>cross and together (third)</li>
+                    <li>floating</li>
+                    <li>rock and go</li>
+                    <li>gum scrape</li>
+                    <li>flick</li>
+                    <li>scuff</li>
+                    <li>scuff → heel toe / happy feet (hip hop)</li>
+                </ul>
+                <h3 id="anchors-open-closed">Open → Closed</h3>
+                <ul>
+                    <li>shift and tap</li>
+                    <li>tap and step (anywhere around the clockface)</li>
+                    <li>check and cross (can point on 1, syncopate and-2; point to side if doing a sugar push after, point back if stepping forward)</li>
+                    <li>relevé: right up - left up (relevé / split stance), left down - right down (into third)</li>
+                </ul>
+                <h3 id="anchors-closed-open">Closed → Open</h3>
+                <ul>
+                    <li>up and slide</li>
+                    <li>cross and slide (can slide through 1 to syncopate and-2)</li>
+                    <li>hook and slide (again, can slide through 1 to syncopate and-2)</li>                    
+                    <li>sailor</li>
+                </ul>
+            </section>
+            
+            <section id="footwork">
+                <h2>Footwork</h2>
+                <ul>
+                    <li>Kick ball change</li>
+                    <li>Point ball change</li>
+                    <li>Knee ball change</li>
+                    <li>ronde</li>
+                    <li>chugs</li>
+                    <li>drill: hitch on 1+2</li>
+                    <li>drill: shag routine - Jeffrey Munson</li>
+                    <li>drill: extra step on 2+ beat, then kick ball change on 3-and-4 -- Keerigan Rudd</li>
+                    <li>drill: leader subtle sweep right leg behind you on beat 4 of underarm turn -- <a href="https://www.youtube.com/watch?v=h9V5C_P6hGY" target="_blank">YouTube</a></li>
+                    <li>drill: left-side pass fold with random sweep or chugs anchor. Try to get follow to feel the difference and mirror you.</li>
+                </ul>
+            </section>
+            
+            <section id="struggles">
+                <h2>Struggles</h2>
+                <ul>
+                    <li>Want to understand general rules so I'm not memorizing patterns and can just react in the moment</li>
+                    <li>Too in my head while social dancing - prevents me from listening to the music</li>
+                    <li>limited pattern vocabulary for matching music e.g. lyrical / hits / fast-continuous parts / etc.</li>
+                    <li>practice reacting to the music even if it's late / unplanned</li>
+                    <li>legato movements "too wiggly"</li>
+                    <li>beach / bar; general upper body styling (isolations a la ben morris vs centrally proximal movements)</li>
+                    <li>walking
+                        <ul>
+                            <li>tend to walk on outside of left foot</li>
+                            <li>aesthetic amount of knee bend in breaking knee</li>
+                            <li>maintain turnout</li>
+                            <li>still roll through foot when "dancing Ts"</li>
+
+                        </ul>
+                    </li>
+                    <li>point back foot when creating shape</li>
+                    <li>
+                        awkward free arm (get comfy with 90deg bend / no loose wrist, behind back, or on chest). Let the arm flow as part of body. Raise free arm on sugar tucks
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+
+    
+    <a href="#top" class="back-to-top">↑</a>
+    
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                
+                // Handle back to top
+                if (href === '#top' || href === '#') {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                    return;
+                }
+                
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
